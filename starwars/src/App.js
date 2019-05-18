@@ -13,7 +13,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
-    // this.getMultiple('https://swapi.co/api/people/');
+    // this.getSpecies('https://swapi.co/api/people/');
   }
 
  // Attempted to get nested urls fetched
@@ -45,6 +45,40 @@ class App extends Component {
   //   });
   // };
 
+  
+
+  // getNested = URL => {
+  //   fetch(URL)
+  //     .then(res => {
+  //       return res.json();
+
+  //     })
+  //     .then(data => {
+  //       return data.results;
+  //     })
+  // }
+
+  // getSpecies = URL => {
+  //   fetch(URL)
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+
+  //       data.results.map(char => {
+  //         const charArray = char.results;
+  //         const specArray = char.getNested(char.species);
+  //         charArray.push(specArray);
+  //         console.log(charArray)
+  //       }
+  //     )
+        
+  //     })
+  //     .catch(err => {
+  //       throw new Error(err);
+  //     });
+  // };
+
   getCharacters = URL => {
     // feel free to research what this code is doing.
     // At a high level we are calling an API to fetch some starwars data from the open web.
@@ -54,7 +88,6 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        console.log(data)
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
