@@ -1,0 +1,18 @@
+.char-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.char-tab {
+    background-color: darkgrey;
+    width: 40%;
+    margin: 10px 5%;
+    border-radius: 10px;
+
+}
+
+.char-tab li{
+    text-align: left;
+}
