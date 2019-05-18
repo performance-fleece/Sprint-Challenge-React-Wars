@@ -6,13 +6,44 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      starwarsTest: []
     };
   }
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
+    // this.getMultiple('https://swapi.co/api/people/');
   }
+
+ // Attempted to get nested urls fetched
+
+  // getMultiple = URL => {
+  //   fetch(URL)
+  //   .then(res => {
+  //     return res.json()
+  //   })
+  //   .then(res => {
+  //     var urlArray =[]
+  //     if (res.length > 0) {
+  //       res.map(data => urlArray.push(data.url))
+  //     }
+  //     return urlArray
+  //   })
+  //   .then(urls => {
+  //     return Promise.all(urls.map(url => {
+  //       return fetch(url).then(res => res.json())
+  //     }
+  //     ))
+  //   })
+  //   .then(res => {
+  //     var objArr = res; 
+  //     this.setState({ starwarsTest: objArr });
+  //   })
+  //   .catch(err => {
+  //     throw new Error(err);
+  //   });
+  // };
 
   getCharacters = URL => {
     // feel free to research what this code is doing.

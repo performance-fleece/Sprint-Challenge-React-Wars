@@ -6,13 +6,33 @@
 }
 
 .char-tab {
+    display: flex;
+    flex-direction: column;
     background-color: darkgrey;
     width: 40%;
     margin: 10px 5%;
     border-radius: 10px;
+    opacity: .75;
 
+}
+
+.char-tab ul{
+    background-color: silver;
+    width: 60%;
+    border-radius: 10px;
+    align-self: center;
 }
 
 .char-tab li{
     text-align: left;
+    margin: 5px 0;
+}
+
+.char-tab h4 {
+    padding: 5px 0;
+    align-self: center;
+    background-color: silver;
+    border-radius: 10px;
+    width: 80%;
+    margin: 15px 0 0 0;
 }

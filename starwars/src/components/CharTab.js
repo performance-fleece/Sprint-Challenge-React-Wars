@@ -3,14 +3,15 @@ import './StarWars.css';
 
 const CharTab = props => {
     return (
-        <div className="char-tab">
-           <h4>{props.name}</h4>
-           <ul>
-               <li>Height : {props.height}</li>
-               <li>Gender : {props.gender}</li>
-           </ul>
-
-        </div>
+      <div className="char-tab">
+        <h4>{props.name}</h4>
+        <ul>
+          <li>Height : {props.starwarsChars.height}</li>
+          <li>Gender : {props.starwarsChars.gender}</li>
+          <li>Mass : {props.starwarsChars.mass}</li>
+          <li>Skin Color : {props.starwarsChars.skin_color}</li>
+        </ul>
+      </div>
     );
 };
 

@@ -8,8 +8,7 @@ const CharList = props => {
                 <CharTab
                 key={tab.created}
                 name={tab.name}
-                height={tab.height}
-                gender={tab.gender}
+                starwarsChars={tab}
                 />
             ))};
         </div>
