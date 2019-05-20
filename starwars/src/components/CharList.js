@@ -9,6 +9,7 @@ const CharList = props => {
                 key={tab.created}
                 name={tab.name}
                 starwarsChars={tab}
+                getNested={props.getNested}
                 />
             ))};
         </div>
